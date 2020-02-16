@@ -55,7 +55,7 @@ class UL_TestTests: XCTestCase {
         }
     }
     
-    func fetchAlbums(){
+    func testFetchAlbums(){
         BackendService.sharedInstance.fetchAlbumsBySelectedUser(id: 1) { (isSuccess, message, albums) in
             if !isSuccess{
                 assertionFailure(message)
@@ -63,7 +63,7 @@ class UL_TestTests: XCTestCase {
         }
     }
     
-    func fetchPhotos(){
+    func testFetchPhotos(){
         BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id: 1) { (isSuccess, message, photos) in
             if !isSuccess{
                 assertionFailure(message)
