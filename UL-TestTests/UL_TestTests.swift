@@ -36,7 +36,7 @@ class UL_TestTests: XCTestCase {
             if isSuccess{
                 XCTAssertTrue(true)
             }else{
-                XCTAssertFalse(true, message)
+                XCTFail(message)
             }
         }
     }
@@ -46,7 +46,7 @@ class UL_TestTests: XCTestCase {
             if isSuccess{
                 XCTAssertTrue(true)
             }else{
-                XCTAssertFalse(true, message)
+                XCTFail(message)
             }
         }
     }
@@ -56,7 +56,7 @@ class UL_TestTests: XCTestCase {
             if isSuccess{
                 XCTAssertTrue(true)
             }else{
-                XCTAssertFalse(true, message)
+                XCTFail(message)
             }
         }
     }
@@ -66,7 +66,7 @@ class UL_TestTests: XCTestCase {
             if isSuccess{
                 XCTAssertTrue(true)
             }else{
-                XCTAssertFalse(true, message)
+                XCTFail(message)
             }
         }
     }
@@ -76,7 +76,7 @@ class UL_TestTests: XCTestCase {
             if isSuccess{
                 XCTAssertTrue(true)
             }else{
-                XCTAssertFalse(true, message)
+                XCTFail(message)
             }
         }
     }
