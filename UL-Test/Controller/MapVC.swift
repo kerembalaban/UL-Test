@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import UL_BackendService
 
 class MapVC: BaseVC {
     var users:[User]!

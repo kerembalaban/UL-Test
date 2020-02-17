@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UL_BackendService
 
 class AlbumVC: BaseTableVC {
     
