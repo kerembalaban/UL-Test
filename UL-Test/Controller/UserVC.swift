@@ -22,19 +22,15 @@ class UserVC: BaseTableVC {
     }
     
     func fetchUserList(){
-        if isInternetAvailable() {
-            showHUD(message: "Fetching users")
-            BackendService.sharedInstance.fetchUserList { (isSuccess,message,userList) in
-                self.hideHUD()
-                if isSuccess{
-                    self.users = userList
-                    self.tableView.reloadData()
-                }else{
-                    self.showErrorString(error: message.isEmpty ? "There is a fetching error" : message)
-                }
+        showHUD(message: "Fetching users")
+        BackendService.sharedInstance.fetchUserList { (userList,error) in
+            self.hideHUD()
+            if error == nil{
+                self.users = userList
+                self.tableView.reloadData()
+            }else{
+                self.showErrorString(error: error!.localizedDescription)
             }
-        }else{
-            self.showErrorString(error: "Please check your internet connection")
         }
     }
     

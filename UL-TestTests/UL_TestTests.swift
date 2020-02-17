@@ -32,52 +32,67 @@ class UL_TestTests: XCTestCase {
     }
     
     func testFetchUsers(){
-        BackendService.sharedInstance.fetchUserList { (isSuccess, message, users) in
-            if isSuccess{
-                XCTAssertTrue(true)
+        let expectation = self.expectation(description: "Network call")
+        BackendService.sharedInstance.fetchUserList { (users, error) in
+            if error == nil {
+                
             }else{
-                XCTFail(message)
+                XCTFail(error!.localizedDescription)
             }
+            expectation.fulfill()
         }
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testFetchPosts(){
-        BackendService.sharedInstance.fetchPostBySelectedUser(id: 1) { (isSuccess, message, posts) in
-            if isSuccess{
-                XCTAssertTrue(true)
+        let expectation = self.expectation(description: "Network call")
+        BackendService.sharedInstance.fetchPostBySelectedUser(id: 1, completion: { (posts, error) in
+            if error == nil {
+                
             }else{
-                XCTFail(message)
+                XCTFail(error!.localizedDescription)
             }
-        }
+            expectation.fulfill()
+        })
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testFetchComments(){
-        BackendService.sharedInstance.fetchCommentsBySelectedPost(id: 1) { (isSuccess, message, posts) in
-            if isSuccess{
-                XCTAssertTrue(true)
+        let expectation = self.expectation(description: "Network call")
+        BackendService.sharedInstance.fetchCommentsBySelectedPost(id: 1, completion: { (comments, error) in
+            if error == nil {
+                
             }else{
-                XCTFail(message)
+                XCTFail(error!.localizedDescription)
             }
-        }
+            expectation.fulfill()
+        })
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testFetchAlbums(){
-        BackendService.sharedInstance.fetchAlbumsBySelectedUser(id: 1) { (isSuccess, message, albums) in
-            if isSuccess{
-                XCTAssertTrue(true)
+        let expectation = self.expectation(description: "Network call")
+        BackendService.sharedInstance.fetchAlbumsBySelectedUser(id: 1, completion: { (albums, error) in
+            if error == nil {
+                
             }else{
-                XCTFail(message)
+                XCTFail(error!.localizedDescription)
             }
-        }
+            expectation.fulfill()
+        })
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
     func testFetchPhotos(){
-        BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id: 1) { (isSuccess, message, photos) in
-            if isSuccess{
-                XCTAssertTrue(true)
+        let expectation = self.expectation(description: "Network call")
+        BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id: 1, completion: { (photos, error) in
+            if error == nil {
+                
             }else{
-                XCTFail(message)
+                XCTFail(error!.localizedDescription)
             }
-        }
+            expectation.fulfill()
+        })
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }

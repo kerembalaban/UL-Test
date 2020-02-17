@@ -10,7 +10,7 @@ import UIKit
 
 class AlbumVC: BaseTableVC {
     
-    var albums:[Album]!
+    var albums:[Album] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +19,15 @@ class AlbumVC: BaseTableVC {
     }
     
     func showPhotosBySelectedAlbum(albumId:Int){
-        if isInternetAvailable() {
-            super.showHUD(message: "Fetching albums")
-            BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id:albumId, completion: { (isSuccess, message, photosList) in
-                super.hideHUD()
-                if isSuccess{
-                    self.showPhotos(photos: photosList)
-                }else{
-                    self.showErrorString(error: message.isEmpty ? "There is a fetching error" : message)
-                }
-            })
-        }else{
-            self.showErrorString(error: "Please check your internet connection")
-        }
+        super.showHUD(message: "Fetching albums")
+        BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id:albumId, completion: { (photosList,error) in
+            super.hideHUD()
+            if (error == nil){
+                self.showPhotos(photos: photosList)
+            }else{
+                self.showErrorString(error: error!.localizedDescription)
+            }
+        })
     }
     
     func showPhotos(photos:[Photo]){

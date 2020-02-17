@@ -47,6 +47,9 @@
 		F0538B2023F9CA9E00E46C9C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0538B1F23F9CA9E00E46C9C /* Company.swift */; };
 		F0538B2123F9CA9E00E46C9C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0538B1F23F9CA9E00E46C9C /* Company.swift */; };
 		F0538B2223F9CA9E00E46C9C /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0538B1F23F9CA9E00E46C9C /* Company.swift */; };
+		F0553D5D23FB12FF00BB634B /* ConnectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0553D5C23FB12FF00BB634B /* ConnectionUtils.swift */; };
+		F0553D5E23FB12FF00BB634B /* ConnectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0553D5C23FB12FF00BB634B /* ConnectionUtils.swift */; };
+		F0553D5F23FB12FF00BB634B /* ConnectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0553D5C23FB12FF00BB634B /* ConnectionUtils.swift */; };
 		F0FF6B8E23F9C0F600632C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF6B8D23F9C0F600632C99 /* AppDelegate.swift */; };
 		F0FF6B9023F9C0F600632C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF6B8F23F9C0F600632C99 /* SceneDelegate.swift */; };
 		F0FF6B9523F9C0F600632C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FF6B9323F9C0F600632C99 /* Main.storyboard */; };
@@ -101,6 +104,7 @@
 		F0538B1723F9C87100E46C9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F0538B1B23F9C93600E46C9C /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		F0538B1F23F9CA9E00E46C9C /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		F0553D5C23FB12FF00BB634B /* ConnectionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionUtils.swift; sourceTree = "<group>"; };
 		F0FF6B8A23F9C0F600632C99 /* UL-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UL-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FF6B8D23F9C0F600632C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FF6B8F23F9C0F600632C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F0553D5B23FB12DD00BB634B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0553D5C23FB12FF00BB634B /* ConnectionUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F0FF6B8123F9C0F600632C99 = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +254,7 @@
 		F0FF6B8C23F9C0F600632C99 /* UL-Test */ = {
 			isa = PBXGroup;
 			children = (
+				F0553D5B23FB12DD00BB634B /* Utils */,
 				F01288AF23F9F94B00517056 /* Delegates */,
 				F01288AE23F9F93D00517056 /* Stroyboards */,
 				F012889923F9D19A00517056 /* Controller */,
@@ -528,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FF6BBF23F9C2A300632C99 /* BackendServices.swift in Sources */,
+				F0553D5D23FB12FF00BB634B /* ConnectionUtils.swift in Sources */,
 				F012889D23F9D1C600517056 /* UserVC.swift in Sources */,
 				F01288B723FA038400517056 /* AlbumVC.swift in Sources */,
 				F01288B923FA039100517056 /* Album.swift in Sources */,
@@ -558,6 +572,7 @@
 				F0FF6BA523F9C0FC00632C99 /* UL_TestTests.swift in Sources */,
 				F0538B1923F9C87100E46C9C /* User.swift in Sources */,
 				F01288BC23FA053200517056 /* Photo.swift in Sources */,
+				F0553D5E23FB12FF00BB634B /* ConnectionUtils.swift in Sources */,
 				F01288B423FA013400517056 /* Comment.swift in Sources */,
 				F0538B1D23F9C93600E46C9C /* Address.swift in Sources */,
 				F0538B2123F9CA9E00E46C9C /* Company.swift in Sources */,
@@ -576,6 +591,7 @@
 				F0FF6BB023F9C0FD00632C99 /* UL_TestUITests.swift in Sources */,
 				F0538B1A23F9C87100E46C9C /* User.swift in Sources */,
 				F01288BD23FA053200517056 /* Photo.swift in Sources */,
+				F0553D5F23FB12FF00BB634B /* ConnectionUtils.swift in Sources */,
 				F01288B523FA013400517056 /* Comment.swift in Sources */,
 				F0538B1E23F9C93600E46C9C /* Address.swift in Sources */,
 				F0538B2223F9CA9E00E46C9C /* Company.swift in Sources */,

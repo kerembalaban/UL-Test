@@ -54,36 +54,28 @@ class UserDetailVC: BaseVC,UITableViewDelegate,UITableViewDataSource {
     }
     
     func fetchUserPosts(){
-        if isInternetAvailable() {
-            super.showHUD(message: "Fetching posts")
-            BackendService.sharedInstance.fetchPostBySelectedUser(id:selectedUser!.id, completion: { (isSuccess, message, postList) in
-                super.hideHUD()
-                if isSuccess{
-                    self.posts = postList
-                    self.tableView.reloadData()
-                }else{
-                    self.showErrorString(error: message.isEmpty ? "There is a fetching error" : message)
-                }
-            })
-        }else{
-            self.showErrorString(error: "Please check your internet connection")
-        }
+        super.showHUD(message: "Fetching posts")
+        BackendService.sharedInstance.fetchPostBySelectedUser(id:selectedUser!.id, completion: { (postList,error) in
+            super.hideHUD()
+            if error == nil{
+                self.posts = postList
+                self.tableView.reloadData()
+            }else{
+                self.showErrorString(error: error!.localizedDescription)
+            }
+        })
     }
     
     @objc func showAlbum(){
-        if isInternetAvailable() {
-            super.showHUD(message: "Fetching albums")
-            BackendService.sharedInstance.fetchAlbumsBySelectedUser(id:selectedUser!.id, completion: { (isSuccess, message, albumList) in
-                super.hideHUD()
-                if isSuccess{
-                    self.showAlbums(albums: albumList)
-                }else{
-                    self.showErrorString(error: message.isEmpty ? "There is a fetching error" : message)
-                }
-            })
-        }else{
-            self.showErrorString(error: "Please check your internet connection")
-        }
+        super.showHUD(message: "Fetching albums")
+        BackendService.sharedInstance.fetchAlbumsBySelectedUser(id:selectedUser!.id, completion: { (albumList,error) in
+            super.hideHUD()
+            if error == nil{
+                self.showAlbums(albums: albumList)
+            }else{
+                self.showErrorString(error: error!.localizedDescription)
+            }
+        })
     }
     
     func showAlbums(albums:[Album]){
