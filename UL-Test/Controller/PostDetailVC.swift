@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import UL_BackendService
 
 class PostDetailVC: BaseTableVC {
     

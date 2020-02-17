@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import JGProgressHUD
+import UL_BackendService
 
 class UserDetailVC: BaseVC,UITableViewDelegate,UITableViewDataSource {
     
