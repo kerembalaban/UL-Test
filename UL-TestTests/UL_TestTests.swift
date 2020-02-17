@@ -33,40 +33,50 @@ class UL_TestTests: XCTestCase {
     
     func testFetchUsers(){
         BackendService.sharedInstance.fetchUserList { (isSuccess, message, users) in
-            if !isSuccess{
-                assertionFailure(message)
+            if isSuccess{
+                XCTAssertTrue(true)
+            }else{
+                XCTAssertFalse(true, message)
             }
         }
     }
     
     func testFetchPosts(){
         BackendService.sharedInstance.fetchPostBySelectedUser(id: 1) { (isSuccess, message, posts) in
-            if !isSuccess{
-                assertionFailure(message)
+            if isSuccess{
+                XCTAssertTrue(true)
+            }else{
+                XCTAssertFalse(true, message)
             }
         }
     }
     
     func testFetchComments(){
         BackendService.sharedInstance.fetchCommentsBySelectedPost(id: 1) { (isSuccess, message, posts) in
-            if !isSuccess{
-                assertionFailure(message)
+            if isSuccess{
+                XCTAssertTrue(true)
+            }else{
+                XCTAssertFalse(true, message)
             }
         }
     }
     
     func testFetchAlbums(){
         BackendService.sharedInstance.fetchAlbumsBySelectedUser(id: 1) { (isSuccess, message, albums) in
-            if !isSuccess{
-                assertionFailure(message)
+            if isSuccess{
+                XCTAssertTrue(true)
+            }else{
+                XCTAssertFalse(true, message)
             }
         }
     }
     
     func testFetchPhotos(){
         BackendService.sharedInstance.fetchPhotosBySelectedAlbum(id: 1) { (isSuccess, message, photos) in
-            if !isSuccess{
-                assertionFailure(message)
+            if isSuccess{
+                XCTAssertTrue(true)
+            }else{
+                XCTAssertFalse(true, message)
             }
         }
     }
