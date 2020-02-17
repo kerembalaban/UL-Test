@@ -4,7 +4,7 @@ PODS:
 
 DEPENDENCIES:
   - JGProgressHUD
-  - UL-BackendService (from `../UL-BackendService`)
+  - UL-BackendService (from `https://github.com/kerembalaban/UL-BackendService.git`, tag `1.0.0`)
 
 SPEC REPOS:
   trunk:
@@ -12,12 +12,18 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   UL-BackendService:
-    :path: "../UL-BackendService"
+    :git: https://github.com/kerembalaban/UL-BackendService.git
+    :tag: 1.0.0
+
+CHECKOUT OPTIONS:
+  UL-BackendService:
+    :git: https://github.com/kerembalaban/UL-BackendService.git
+    :tag: 1.0.0
 
 SPEC CHECKSUMS:
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
-  UL-BackendService: 3598bac1441dbaaede5c9c15049825d6542805b8
+  UL-BackendService: abd3ff018b1b946b560d86dfcc2329c02ecefba4
 
-PODFILE CHECKSUM: 15546b6e69495c80a02476fb4b61774ac9b269e9
+PODFILE CHECKSUM: ef4f58b8be966c1aa65f7bcf7a03ce216f6e785f
 
 COCOAPODS: 1.8.4

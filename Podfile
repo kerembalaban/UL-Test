@@ -6,7 +6,7 @@ target 'UL-Test' do
   use_frameworks!
 
   pod 'JGProgressHUD'
-  pod 'UL-BackendService', :path => '../UL-BackendService'
+  pod 'UL-BackendService', :git => 'https://github.com/kerembalaban/UL-BackendService.git', :tag => '1.0.0'
 
   # Pods for UL-Test
   target 'UL-TestTests' do
