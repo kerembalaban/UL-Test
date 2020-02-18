@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import UL_BackendService
 @testable import UL_Test
 
 class UL_TestTests: XCTestCase {

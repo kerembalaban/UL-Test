@@ -11,6 +11,7 @@ target 'UL-Test' do
   # Pods for UL-Test
   target 'UL-TestTests' do
     inherit! :search_paths
+    pod 'UL-BackendService', :git => 'https://github.com/kerembalaban/UL-BackendService.git', :tag => '1.0.0'
     # Pods for testing
   end
 
