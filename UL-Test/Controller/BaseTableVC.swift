@@ -11,7 +11,7 @@ import JGProgressHUD
 
 class BaseTableVC: UITableViewController {
 
-    let hud = JGProgressHUD(style: .dark)
+    public let hud = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()

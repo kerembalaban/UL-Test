@@ -15,8 +15,8 @@ class MapVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            checkLocationServices()
-            prepareUsersMapAnnotation()
+        checkLocationServices()
+        prepareUsersMapAnnotation()
     }
     
     func prepareUsersMapAnnotation() {

@@ -15,17 +15,13 @@ class UserVC: BaseTableVC {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         fetchUserList()
     }
-    
+
     func fetchUserList(){
         showHUD(message: "Fetching users")
         BackendService.sharedInstance.fetchUserList { (userList,error) in
-            self.hideHUD()
+            super.hideHUD()
             if error == nil{
                 self.users = userList
                 self.tableView.reloadData()
