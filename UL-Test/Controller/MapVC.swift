@@ -32,7 +32,7 @@ class MapVC: BaseVC {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let filteredUser = users.filter {
-            $0.name == view.annotation?.title!
+            $0.name == (view.annotation?.title!)!
         }
         
         if filteredUser.count > 0 {
